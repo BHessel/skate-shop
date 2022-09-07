@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
-import Signup from "./Signup"
+// import { useState, useEffect } from "react";
+import AuthProvider from "../context/AuthContext";
+import Signup from "./Signup";
 // import { db } from "../firebase-config";
 // import { collection, getDocs,  } from "firebase/firestore";
 
 function App() {
   // const [ users, setUsers ] = useState([])
   // const usersCollectionRef = collection(db, "users");
-
 
   // useEffect(() => {
   //   const getUsers = async () => {
@@ -18,13 +18,13 @@ function App() {
   //   };
   // }, [usersCollectionRef]);
 
-
   return (
-    <div className="App">
-      <h1>hello world</h1>
-      <Signup />
-    </div>
-  );
+    <AuthProvider>
+      <div className="app-container">
+        <Signup />
+      </div>
+    </AuthProvider>
+  )
 }
 
 export default App;
