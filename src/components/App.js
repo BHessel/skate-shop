@@ -1,6 +1,9 @@
 // import { useState, useEffect } from "react";
 import AuthProvider from "../context/AuthContext";
 import Signup from "./Signup";
+import Signin from "./Signin";
+import Account from "./Account";
+import { Routes, Route } from "react-router-dom";
 // import { db } from "../firebase-config";
 // import { collection, getDocs,  } from "firebase/firestore";
 
@@ -19,12 +22,17 @@ function App() {
   // }, [usersCollectionRef]);
 
   return (
-    <AuthProvider>
-      <div className="app-container">
-        <Signup />
-      </div>
-    </AuthProvider>
-  )
+    <div className="app-container">
+      <h1>Main Page for Site - App.js</h1>
+      <AuthProvider>
+        <Routes>
+          <Route exact path={"/"} element={<Signin />} />
+          <Route path={"/signup"} element={<Signup />} />
+          <Route path={"/account"} element={<Account />} />
+        </Routes>
+      </AuthProvider>
+    </div>
+  );
 }
 
 export default App;

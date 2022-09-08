@@ -1,9 +1,8 @@
-//this page will be for users to sign up and access their logged-in home (private routes) for order history + to make profile changes
 import React, { useRef, useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
 
-const Signup = () => {
+const Signin = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
   const passwordConfirmRef = useRef();
@@ -33,7 +32,7 @@ const Signup = () => {
 
   return (
     <div className="max-w-[700px] mx-auto my-16 p-4">
-      <h1 className="text-2xl font-bold py-2">Sign Up</h1>
+      <h1 className="text-2xl font-bold py-2">Sign In</h1>
       <h3>{error}</h3>
       <form onSubmit={handleSubmit}>
         <div className="flex flex-col py-2">
@@ -77,18 +76,18 @@ const Signup = () => {
             className="bg-blue-600 hover:bg-blue-500 text-white w-full py-4 my-2"
             disabled={loading}
           >
-            Sign Up
+            Sign In
           </button>
         </div>
       </form>
 
       <div className="to-login-page">
         <p className="py-2">
-          Already have an account? <Link to="/">Login</Link>
+          New here? <Link to="/signup">Create an Account</Link>
         </p>
       </div>
     </div>
   );
 };
 
-export default Signup;
+export default Signin;
