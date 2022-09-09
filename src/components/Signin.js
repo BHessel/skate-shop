@@ -20,7 +20,9 @@ const Signin = () => {
       await signin(emailRef.current.value, passwordRef.current.value);
       navigate("/account");
     } catch {
-      setError("Failed to sign in. Check to make sure email and password are correct.");
+      setError(
+        "Failed to sign in. Check to make sure email and password are correct."
+      );
     }
     setLoading(false);
   };
@@ -63,6 +65,19 @@ const Signin = () => {
           </button>
         </div>
       </form>
+      <div className="">
+        <Link to="/password-reset">Forgot password? Click here.</Link>
+      </div>
+      {/*
+      1) make forgot password page
+      2) has user enter email to get a reset password link
+      3) send email w/ password reset
+        sendPasswordResetEmail(auth, email)
+        4) alert email is on its way, check your inbox to change password
+        5) setTimeout(() => {
+        navigate to signin page
+        }, 5000)
+      */}
 
       <div className="to-login-page">
         <p className="py-2">

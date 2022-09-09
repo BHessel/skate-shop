@@ -3,6 +3,7 @@ import AuthProvider from "../context/AuthContext";
 import Signup from "./Signup";
 import Signin from "./Signin";
 import Account from "./Account";
+import PasswordReset from "./PasswordReset";
 import { Routes, Route } from "react-router-dom";
 import PrivateRoute from "./PrivateRoute";
 // import { db } from "../firebase-config";
@@ -37,6 +38,7 @@ function App() {
               </PrivateRoute>
             }
           />
+        <Route path={"/password-reset"} element={<PasswordReset />} />
         </Routes>
       </AuthProvider>
     </div>
