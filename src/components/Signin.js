@@ -5,8 +5,7 @@ import { useNavigate, Link } from "react-router-dom";
 const Signin = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
-  const passwordConfirmRef = useRef();
-  const { createUser } = useAuth();
+  const { signin } = useAuth();
   const navigate = useNavigate();
 
   const [error, setError] = useState("");
@@ -15,17 +14,13 @@ const Signin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-      return setError("Passwords do not match");
-    }
-
     try {
       setError("");
       setLoading(true);
-      await createUser(emailRef.current.value, passwordRef.current.value);
+      await signin(emailRef.current.value, passwordRef.current.value);
       navigate("/account");
     } catch {
-      setError("Failed to create an account");
+      setError("Failed to sign in. Check to make sure email and password are correct.");
     }
     setLoading(false);
   };
