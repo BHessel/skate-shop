@@ -58,18 +58,6 @@ const Signin = () => {
           ></input>
           <label className="py-2 font-medium">Password</label>
         </div>
-
-        <div className="flex flex-col py-2">
-          <input
-            type="password"
-            name="password-confirm"
-            placeholder="Password"
-            className="border p-3"
-            ref={passwordConfirmRef}
-            required
-          ></input>
-        </div>
-        <label className="py-2 font-medium">Confirm Password</label>
         <div className="flex flex-col py-2">
           <button
             type="submit"
