@@ -22,12 +22,12 @@ const AuthProvider = ({ children }) => {
   };
 
   const signin = (email, password) => {
-    return signInWithEmailAndPassword(auth, email, password)
-  }
+    return signInWithEmailAndPassword(auth, email, password);
+  };
 
   const logout = () => {
-    return signOut(auth)
-  }
+    return signOut(auth);
+  };
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -44,7 +44,7 @@ const AuthProvider = ({ children }) => {
     user,
     createUser,
     logout,
-    signin
+    signin,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

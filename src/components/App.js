@@ -4,6 +4,7 @@ import Signup from "./Signup";
 import Signin from "./Signin";
 import Account from "./Account";
 import { Routes, Route } from "react-router-dom";
+import PrivateRoute from "./PrivateRoute";
 // import { db } from "../firebase-config";
 // import { collection, getDocs,  } from "firebase/firestore";
 
@@ -28,7 +29,14 @@ function App() {
         <Routes>
           <Route exact path={"/"} element={<Signin />} />
           <Route path={"/signup"} element={<Signup />} />
-          <Route path={"/account"} element={<Account />} />
+          <Route
+            path={"/account"}
+            element={
+              <PrivateRoute>
+                <Account />
+              </PrivateRoute>
+            }
+          />
         </Routes>
       </AuthProvider>
     </div>
