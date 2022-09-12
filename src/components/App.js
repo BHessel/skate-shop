@@ -3,7 +3,7 @@ import AuthProvider from "../context/AuthContext";
 import Signup from "./Signup";
 import Signin from "./Signin";
 import Account from "./Account";
-import Navbar from './Navbar';
+import Navbar from './Nav/Navbar';
 import PasswordReset from "./PasswordReset";
 import { Routes, Route } from "react-router-dom";
 import PrivateRoute from "./PrivateRoute";
