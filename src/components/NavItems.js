@@ -8,7 +8,7 @@ const NavItems = (props) => {
     //I could change these links to a button w/ link. Might be easier for styling?
     <>
       <Link to={items.route}>
-        <li>{items.title}</li>
+        <li className="px-4">{items.title}</li>
       </Link>
     </>
   );
