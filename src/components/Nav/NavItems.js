@@ -12,7 +12,7 @@ const NavItems = (props) => {
         {items.dropdown ? (
           <>
             <Link to={items.route}>
-              <button className="px-4" type="button" aria-haspopup="menu">
+              <button className="px-4 border border-red-800" type="button" aria-haspopup="menu">
                 {items.title}
               </button>
             </Link>
