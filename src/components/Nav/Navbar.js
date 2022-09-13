@@ -10,12 +10,6 @@ import { navBarItems } from "./NavData";
 //right corner is createAccount/signin link plus cart
 
 const Navbar = () => {
-  // const navBarItems = [
-  //   { title: "Skateboards", route: "/skateboards" },
-  //   { title: "Shoes", route: "/shoes" },
-  //   { title: "Accessories", route: "/accessories" },
-  //   { title: "Local", route: "/local" },
-  // ];
 
   return (
     <nav className="w-full flex justify-between items-center px-8 py-3">
