@@ -1,10 +1,11 @@
 import React from "react";
+import Carousel from "./Carousel";
 
 const Home = () => {
   return (
     <>
       <div>
-        <h1>Home Page Hero Banner</h1>
+        <Carousel />
       </div>
       <div>
         <h2>New Arrivals</h2>

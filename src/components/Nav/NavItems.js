@@ -26,6 +26,11 @@ const NavItems = (props) => {
             <ChevronDownIcon
               className="-mr-1 ml-2 h-5 w-5"
               aria-hidden="true"
+              // onMouseEnter=""
+              // onMouseLeave=""
+              // control this w/ state to release dropdown?
+              // oME triggers a function that takes in open state and sets it to true
+              // which goes down to line 52 (active) and assesses open
             />
           </Menu.Button>
         </div>
