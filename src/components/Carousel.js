@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 // import { AiOutlineVerticalRight, AiOutlineVerticalLeft } from "react-icons/ai";
-import skater from "../images/skate-unsplash.jpg";
+import skater from "../images/flip-unsplash.jpg";
 import sunsetSkate from "../images/sunset-unsplash.jpg";
 import teamSkate from "../images/team-unsplash.jpg";
 
@@ -23,9 +23,9 @@ const Carousel = () => {
   };
 
   return (
-    <div className="w-11/12 h-full select-none relative">
+    <div className="w-11/12 select-none relative">
       <div className="aspect-w-16 aspect-h-9">
-        <img className="" src={carouselImages[currentIndex]} alt="carousel" />
+        <img src={carouselImages[currentIndex]} alt="carousel" />
       </div>
 
       <div className="h-full top-0 left-0 absolute px-3 bg-black opacity-5 hover:opacity-40 flex items-center justify-center">
