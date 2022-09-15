@@ -1,71 +1,47 @@
 import React, { useState, useEffect, useRef } from "react";
 // import { AiOutlineVerticalRight, AiOutlineVerticalLeft } from "react-icons/ai";
-import hero1 from "../images/hero_1.png";
-import hero2 from "../images/hero_2.png";
+import skater from "../images/skate-unsplash.jpg";
+import sunsetSkate from "../images/sunset-unsplash.jpg";
+import teamSkate from "../images/team-unsplash.jpg";
 
-const featuredProducts = [hero1, hero2];
-
-let count = 0;
-let slideInterval;
+const carouselImages = [skater, sunsetSkate, teamSkate];
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const slideRef = useRef();
-  const removeAnimation = () => {
-    slideRef.current.classList.remove("fade-anim");
-  };
-  useEffect(() => {
-    slideRef.current.addEventListener("animationend", removeAnimation);
-    slideRef.current.addEventListener("mouseenter", pauseSlider);
-    slideRef.current.addEventListener("mouseleave", startSlider);
 
-    startSlider();
-    return () => {
-      pauseSlider();
-    };
-    // eslint-disable-next-line
-  }, []);
+  let counter = 0;
 
-  const startSlider = () => {
-    slideInterval = setInterval(() => {
-      handleOnNextClick();
-    }, 3000);
+  const handleNextClick = () => {
+    counter = (currentIndex + 1) % carouselImages.length;
+    setCurrentIndex(counter);
   };
 
-  const pauseSlider = () => {
-    clearInterval(slideInterval);
-  };
-
-  const handleOnNextClick = () => {
-    count = (count + 1) % featuredProducts.length;
-    setCurrentIndex(count);
-    slideRef.current.classList.add("fade-anim");
-  };
-  const handleOnPrevClick = () => {
-    const productsLength = featuredProducts.length;
-    count = (currentIndex + productsLength - 1) % productsLength;
-    setCurrentIndex(count);
-    slideRef.current.classList.add("fade-anim");
+  const handleBackClick = () => {
+    counter =
+      (currentIndex + carouselImages.length - 1) % carouselImages.length;
+    setCurrentIndex(counter);
   };
 
   return (
-    <div ref={slideRef} className="w-full select-none relative">
+    <div className="w-11/12 h-full select-none relative">
       <div className="aspect-w-16 aspect-h-9">
-        <img src={featuredProducts[currentIndex]} alt="" />
+        <img className="" src={carouselImages[currentIndex]} alt="carousel" />
       </div>
 
-      <div className="absolute w-full top-1/2 transform -translate-y-1/2 px-3 flex justify-between items-center">
+      <div className="h-full top-0 left-0 absolute px-3 bg-black opacity-5 hover:opacity-40 flex items-center justify-center">
         <button
-          className="bg-black text-white p-1 rounded-full bg-opacity-50 cursor-pointer hover:bg-opacity-100 transition"
-          onClick={handleOnPrevClick}
+          className="bg-black text-white p-1 rounded-full bg-opacity-40 hover:bg-opacity-100 transition"
+          onClick={handleBackClick}
         >
-          {/* <AiOutlineVerticalRight size={30} /> */}
+          X
         </button>
+      </div>
+      <div className="h-full top-0 right-0 absolute px-3 bg-black opacity-5 hover:opacity-40 flex items-center justify-center">
         <button
-          className="bg-black text-white p-1 rounded-full bg-opacity-50 cursor-pointer hover:bg-opacity-100 transition"
-          onClick={handleOnNextClick}
+          className="bg-black text-white p-1 rounded-full bg-opacity-40 hover:bg-opacity-100 transition"
+          onClick={handleNextClick}
         >
-          {/* <AiOutlineVerticalLeft size={30} /> */}
+          X
         </button>
       </div>
     </div>
