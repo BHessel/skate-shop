@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel from "./Carousel";
+import NewArrivals from "./NewArrivals";
 
 const Home = () => {
   return (
@@ -7,10 +8,9 @@ const Home = () => {
       <div className="flex justify-center">
         <Carousel />
       </div>
-      <div>
-        <h2>New Arrivals</h2>
+      <div className=""></div>
+        <NewArrivals />
         {/* cards */}
-      </div>
       <div>
         <h2>Shop</h2>
         {/* display grid w/ shop categories */}
