@@ -12,7 +12,7 @@ import PrivateRoute from "./PrivateRoute";
 function App() {
 
   return (
-    <div className="max-w-screen-xl m-auto mb-20">
+    <div className="max-w-screen-xl m-auto">
       <AuthProvider>
         <Navbar />
         <Routes>
