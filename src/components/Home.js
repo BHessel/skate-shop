@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from "./Carousel";
 import NewArrivals from "./NewArrivals";
+import Shop from "./Shop";
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
         <NewArrivals />
         {/* cards */}
       <div>
-        <h2>Shop</h2>
+        <Shop />
         {/* display grid w/ shop categories */}
       </div>
       <div>

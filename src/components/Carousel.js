@@ -23,7 +23,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="w-11/12 select-none relative">
+    <div className="w-10/12 select-none relative">
       {/* <div className=""> */}
         <img className="" src={carouselImages[currentIndex]} alt="carousel" />
       {/* </div> */}
