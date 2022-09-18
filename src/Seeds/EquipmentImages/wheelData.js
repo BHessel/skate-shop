@@ -1,0 +1,58 @@
+export const wheelData = [
+  {
+    name: "Bighead Burn Posse",
+    skater: "Team",
+    company: "Spitfire",
+    size: ["51mm", "53mm", "55mm"],
+    //   image: "https:faker.jpg",
+  },
+  {
+    name: "Formula Four Swirled Classic 99a",
+    skater: "Team",
+    company: "Spitfire",
+    size: ["52mm", "53mm", "56mm"],
+    //   image: "https:faker.jpg",
+  },
+  {
+    name: "Overtime Conical Full 99a",
+    skater: "Kanfoush",
+    company: "Spitfire",
+    size: ["53mm"],
+    //   image: "https:faker.jpg",
+  },
+  {
+    name: "Formula Four Floral Bighead Conical 99a",
+    skater: "Team",
+    company: "Spitfire",
+    size: ["54mm"],
+    //   image: "https:faker.jpg",
+  },
+  {
+    name: "STF Regulators 103a V5",
+    skater: "Team",
+    company: "Bones",
+    size: ["52mm", "53mm", "54mm", "55mm"],
+    //   image: "https:faker.jpg",
+  },
+  {
+    name: "STF Reaper Burial 99a V1",
+    skater: "Team",
+    company: "Bones",
+    size: ["52mm"],
+    //   image: "https:faker.jpg",
+  },
+  {
+    name: "SPF Hawk T-Bones 84B P5 Sidecuts",
+    skater: "Hawk",
+    company: "Bones",
+    size: ["58mm"],
+    //   image: "https:faker.jpg",
+  },
+  {
+    name: "SPF Sloan Hammered 84B P5 Sidecut",
+    skater: "Sloan",
+    company: "Bones",
+    size: ["56mm", "58mm"],
+    //   image: "https:faker.jpg",
+  },
+];
