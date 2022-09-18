@@ -2,20 +2,25 @@ import React from "react";
 import decks from "../images/shopImages/deckCover.jpeg";
 import wheels from "../images/shopImages/wheelCover.jpeg";
 import trucks from "../images/shopImages/indyTruckCover.jpeg";
+import gripColor from "../images/shopImages/gripColorCover.jpeg";
+import shoes from "../images/shopImages/holdShoeCover.jpeg";
+import hardware from "../images/shopImages/indyHardwareCover.jpg";
+import accessories from "../images/shopImages/waxCover.webp";
+import apparelCover from "../images/shopImages/apparelCover.webp";
 
-const photos = [decks, wheels, trucks];
+const photos = [decks, wheels, trucks, gripColor, shoes, hardware, accessories, apparelCover];
 
 const Shop = () => {
   return (
-    <div className="w-full mt-10">
+    <div className="w-full mt-14">
       <div className="flex justify-center">
         <h1 className="text-2xl font-bold">Shop</h1>
       </div>
-      <div className="mt-3 mx-14 h-80 border bg-blue-700 grid grid-cols-4 gap-2">
+      <div className="mt-3 mx-32 h-72 grid grid-cols-4 gap-6 ">
         {/* <div className="grid-cols-3"> */}
         {photos.map((photo) => (
-          <div className="relative border border-gray-300">
-            <img className="absolute h-full w-full object-cover" src={photo} alt="" />
+          <div className="relative flex justify-center items-center shadow-md">
+            <img className="absolute h-full w-full object-cover rounded-md" src={photo} alt="" />
           </div>
         ))}
         {/* </div> */}
