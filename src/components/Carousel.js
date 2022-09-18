@@ -24,9 +24,7 @@ const Carousel = () => {
 
   return (
     <div className="w-10/12 select-none relative">
-      {/* <div className=""> */}
-        <img className="" src={carouselImages[currentIndex]} alt="carousel" />
-      {/* </div> */}
+      <img src={carouselImages[currentIndex]} alt="carousel" />
 
       <div className="h-full top-0 left-0 absolute px-3 bg-black opacity-5 hover:opacity-40 flex items-center justify-center">
         <button

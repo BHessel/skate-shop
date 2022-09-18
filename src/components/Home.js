@@ -4,8 +4,14 @@ import NewArrivals from "./NewArrivals";
 import Shop from "./Shop";
 import Team from "./Team";
 import Newsletter from "./Newsletter";
-import Location from "./Location";
+import Maps from "./Maps/Maps";
 import Footer from "./Footer";
+
+const location = {
+  address: "17010 S 48th St, Phoenix, AZ 85048",
+  lat: 33.29142,
+  lng: -111.97979,
+};
 
 const Home = () => {
   return (
@@ -13,8 +19,9 @@ const Home = () => {
       <div className="flex justify-center">
         <Carousel />
       </div>
-      <div className=""></div>
-      <NewArrivals />
+      <div className="">
+        <NewArrivals />
+      </div>
       <div>
         <Shop />
       </div>
@@ -25,7 +32,7 @@ const Home = () => {
         <Newsletter />
       </div>
       <div className="flex justify-center mt-10">
-        <Location />
+        <Maps location={location} center={{lat: 33.29142, long: -111.97979}} zoomLevel={17} />
       </div>
       <div className="flex flex-row justify-around mt-10 w-full h-80 bg-black bg-opacity-90 p-5">
         <Footer />
