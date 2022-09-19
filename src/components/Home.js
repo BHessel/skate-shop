@@ -31,10 +31,10 @@ const Home = () => {
       <div className="flex justify-center mt-10 w-full h-64 bg-gray-700">
         <Newsletter />
       </div>
-      <div className="flex justify-center mt-10">
+      <div className="flex h-[400px]">
         <Maps />
       </div>
-      <div className="flex flex-row justify-around mt-10 w-full h-80 bg-black bg-opacity-90 p-5">
+      <div className="flex flex-row justify-around w-full h-80 bg-black bg-opacity-90 p-5">
         <Footer />
       </div>
     </>
