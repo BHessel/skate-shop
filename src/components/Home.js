@@ -7,12 +7,6 @@ import Newsletter from "./Newsletter";
 import Maps from "./Maps/Maps";
 import Footer from "./Footer";
 
-// const location = {
-//   address: "17010 S 48th St, Phoenix, AZ 85048",
-//   lat: 33.29142,
-//   lng: -111.97979,
-// };
-
 const Home = () => {
   return (
     <>

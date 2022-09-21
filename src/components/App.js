@@ -4,13 +4,13 @@ import Signup from "./Signup";
 import Signin from "./Signin";
 import Home from "./Home";
 import Account from "./Account";
-import Navbar from './Nav/Navbar';
+import Navbar from "./Nav/Navbar";
 import PasswordReset from "./PasswordReset";
+import Products from "./Products";
 import { Routes, Route } from "react-router-dom";
 import PrivateRoute from "./PrivateRoute";
 
 function App() {
-
   return (
     <div className="max-w-screen-xl m-auto">
       <AuthProvider>
@@ -19,6 +19,8 @@ function App() {
           <Route exact path={"/"} element={<Home />} />
           <Route path={"/signin"} element={<Signin />} />
           <Route path={"/signup"} element={<Signup />} />
+          <Route path={"/products"} element={<Products />} />
+          {/* nest product routes when I get there, e.g. products/decks/7 (all products, product type (deck) specific, item specific) */}
           <Route
             path={"/account"}
             element={
@@ -27,7 +29,7 @@ function App() {
               </PrivateRoute>
             }
           />
-        <Route path={"/password-reset"} element={<PasswordReset />} />
+          <Route path={"/password-reset"} element={<PasswordReset />} />
         </Routes>
       </AuthProvider>
     </div>
