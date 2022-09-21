@@ -11,14 +11,14 @@ const NewArrivals = () => {
     </div>
     <div className="mt-3 ml-7 flex flex-row justify-around h-80">
       <div className="relative mr-7 flex justify-center items-center w-1/3">
-        <img className="absolute h-full w-full object-cover" src={joslin} alt="" />
+        <img className="absolute h-full w-full object-contain" src={joslin} alt="" />
         {/* skater face, on hover zoom or opactiy */}
       </div>
       <div className="relative mr-7 flex justify-center items-center w-1/3">
-        <img className="absolute h-full w-full object-cover" src={vans} alt=""/>
+        <img className="absolute h-full w-full object-contain" src={vans} alt=""/>
       </div>
       <div className="relative mr-7 flex justify-center items-center w-1/3">
-        <img className="absolute h-full w-full object-cover" src={mcCode} alt=""/>
+        <img className="absolute h-full w-full object-contain" src={mcCode} alt=""/>
       </div>
     </div>
   </div>
