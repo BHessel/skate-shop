@@ -7,6 +7,7 @@ import Account from "./Account";
 import Navbar from "./Nav/Navbar";
 import PasswordReset from "./PasswordReset";
 import Products from "./Products";
+import ProductPage from "./ProductPage";
 import { Routes, Route } from "react-router-dom";
 import PrivateRoute from "./PrivateRoute";
 
@@ -20,6 +21,7 @@ function App() {
           <Route path={"/signin"} element={<Signin />} />
           <Route path={"/signup"} element={<Signup />} />
           <Route path={"/products"} element={<Products />} />
+            <Route path={"/products/:id"} element={<ProductPage />} />
           {/* nest product routes when I get there, e.g. products/decks/7 (all products, product type (deck) specific, item specific) */}
           <Route
             path={"/account"}

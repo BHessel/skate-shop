@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import mcclung from "../images/mcclung-code.jpeg";
 import fynn from "../Seeds/EquipmentImages/fynn-ALF.jpeg";
 import giraud from "../Seeds/EquipmentImages/giraud-ALF.jpeg";
