@@ -29,13 +29,26 @@ const Products = () => {
   return (
     <>
       <div className="flex h-screen">
-      <div className="flex flex-col w-1/4">
-        <h2 className="font-semibold mx-3 mb-4 border-b-2">
-          Product Type Goes Here
-        </h2>
-        
-      </div>
-        <div className="w-4/5 h-max grid grid-cols-3 gap-4 mx-4 border-l-2 border-black">
+        <div className="flex flex-col w-1/5 pl-5">
+          <h2 className="font-semibold mr-auto mb-3 border-b-2">
+            Product Type Goes Here
+          </h2>
+          <div className="flex ml-5">
+            <input type="checkbox" className="mr-5" />
+            <p>lorem ipsum</p>
+          </div>
+
+          <div className="flex ml-5">
+            <input type="checkbox" className="mr-5" />
+            <p>lorem ipsum</p>
+          </div>
+
+          <div className="flex ml-5">
+            <input type="checkbox" className="mr-5" />
+            <p>lorem ipsum</p>
+          </div>
+        </div>
+        <div className="w-4/5 h-max grid grid-cols-3 gap-4 p-4 border-l-2 border-black">
           {PLACEHOLDER.map((num) => (
             <div className="flex flex-col hover:scale-110 ease-in duration-200">
               <div className="relative flex justify-center items-center drop-shadow-sm h-48">
