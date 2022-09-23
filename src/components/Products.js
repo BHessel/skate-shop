@@ -28,16 +28,14 @@ const PLACEHOLDER = [
 const Products = () => {
   return (
     <>
-      <div>
-        <h1 className="font-semibold mx-3 mb-4 border-b-2">
-          Product Type Goes Here
-        </h1>
-      </div>
       <div className="flex h-screen">
-        <div className="border-black border-r-4">
-          Sidebar with filters goes here
-        </div>
-        <div className="w-4/5 h-40 grid grid-cols-3 gap-4 mx-4">
+      <div className="flex flex-col w-1/4">
+        <h2 className="font-semibold mx-3 mb-4 border-b-2">
+          Product Type Goes Here
+        </h2>
+        
+      </div>
+        <div className="w-4/5 h-max grid grid-cols-3 gap-4 mx-4 border-l-2 border-black">
           {PLACEHOLDER.map((num) => (
             <div className="flex flex-col hover:scale-110 ease-in duration-200">
               <div className="relative flex justify-center items-center drop-shadow-sm h-48">
