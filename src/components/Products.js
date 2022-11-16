@@ -30,6 +30,7 @@ const PLACEHOLDER = [
 const Products = () => {
   return (
     <>
+      {/* this img comes from CSS's page, placeholder, don't copy directly */}
       <div className="h-40 mt-4">
         <img
           src="https://cdn.shopify.com/s/files/1/0519/1388/3831/files/CAT-DT-skateboards22_1296x.jpg?v=1654538861"
