@@ -15,13 +15,15 @@ function App() {
   return (
     <div className="max-w-screen-xl m-auto">
       <AuthProvider>
-        <Navbar />
+        <div className="bg-white sticky top-0 z-20">
+          <Navbar />
+        </div>
         <Routes>
           <Route exact path={"/"} element={<Home />} />
           <Route path={"/signin"} element={<Signin />} />
           <Route path={"/signup"} element={<Signup />} />
           <Route path={"/products"} element={<Products />} />
-            <Route path={"/products/:id"} element={<ProductPage />} />
+          <Route path={"/products/:id"} element={<ProductPage />} />
           {/* nest product routes when I get there, e.g. products/decks/7 (all products, product type (deck) specific, item specific) */}
           <Route
             path={"/account"}

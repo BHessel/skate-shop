@@ -11,6 +11,7 @@ import joslin from "../Seeds/EquipmentImages/joslin-ALF.jpeg";
 import joslin2 from "../Seeds/EquipmentImages/joslin-code.jpeg";
 import joslin3 from "../Seeds/EquipmentImages/joslin-diagonals.jpeg";
 import mcclung2 from "../Seeds/EquipmentImages/mcclung-diagonals.jpeg";
+import Sidebar from "./Sidebar";
 
 const PLACEHOLDER = [
   mcclung,
@@ -29,39 +30,26 @@ const PLACEHOLDER = [
 const Products = () => {
   return (
     <>
-      <div className="flex h-screen">
-        <div className="flex flex-col w-1/5 pl-5">
-          <h2 className="font-semibold mr-auto mb-3 border-b-2">
-            Product Type Goes Here
-          </h2>
-          <div className="flex ml-5">
-            <input type="checkbox" className="mr-5" />
-            <p>lorem ipsum</p>
-          </div>
-
-          <div className="flex ml-5">
-            <input type="checkbox" className="mr-5" />
-            <p>lorem ipsum</p>
-          </div>
-
-          <div className="flex ml-5">
-            <input type="checkbox" className="mr-5" />
-            <p>lorem ipsum</p>
-          </div>
-        </div>
-        <div className="w-4/5 h-max grid grid-cols-3 gap-4 p-4 border-l-2 border-black">
+      <div className="h-40 mt-4">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0519/1388/3831/files/CAT-DT-skateboards22_1296x.jpg?v=1654538861"
+          alt=""
+        />
+        <h1 className="text-white">Skateboards</h1>
+      </div>
+      <div className="flex h-screen mt-20">
+        <Sidebar />
+        <div className="w-4/5 h-max grid grid-cols-3 gap-4 p-4">
           {PLACEHOLDER.map((num) => (
             <div className="flex flex-col hover:scale-110 ease-in duration-200">
-              <div className="relative flex justify-center items-center drop-shadow-sm h-48">
-                {/* {num} */}
+              <div className="relative flex justify-center items-center h-48">
                 <img
                   className="absolute h-full w-full object-contain"
                   src={num}
                   alt=""
                 />
               </div>
-
-              <p className="text-center font-semibold">
+              <p className="text-center font-semibold mt-2">
                 McClung Code Deck - Plan B
               </p>
               <p className="text-center">$59</p>

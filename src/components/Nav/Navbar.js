@@ -9,7 +9,7 @@ import { navBarItems } from "./NavData";
 
 const Navbar = () => {
   return (
-    <div className="w-full flex justify-between items-center px-8 py-3">
+    <div className="w-full flex justify-between items-center px-8 py-3 border-b-2">
       <Link to="/">
         <img src={svgLogo} className="h-[125px]" alt="logo" />
       </Link>
