@@ -6,9 +6,9 @@ const Sidebar = () => {
       <h2 className="font-semibold mr-auto mb-3 border-b-2">
         Product Type Goes Here
       </h2>
-      <div className="flex flex-col mr-5 cursor-pointer border-b-2">
+      <div className="flex flex-col mr-5 border-b-2">
         {/* each needs to link to respective page */}
-        <ul className="mb-10">
+        <ul className="mb-10 cursor-pointer">
           <li className="py-2 px-3 border-l-white border-l-4 hover:border-l-blue-500">
             Decks
           </li>
@@ -39,20 +39,39 @@ const Sidebar = () => {
         </ul>
       </div>
 
-      {/* This part should filter by brand, filter by cost, */}
-      <div className="flex flex-col m-2">
+      {/* This part should filter by brand */}
+      <div className="flex flex-col mt-3 ml-2 mr-5 border-b-2">
         <h2>Brand</h2>
+        <div className="mb-10">
+          <div className="flex mt-3">
+            <input type="checkbox" className="mx-3" />
+            <p>lorem ipsum</p>
+          </div>
+          <div className="flex mt-3">
+            <input type="checkbox" className="mx-3" />
+            <p>lorem ipsum</p>
+          </div>
+          <div className="flex mt-3">
+            <input type="checkbox" className="mx-3" />
+            <p>lorem ipsum</p>
+          </div>
+        </div>
+      </div>
+
+      {/* filter by price */}
+      <div className="flex flex-col mt-3 ml-2">
+        <h2>Shop by Price</h2>
         <div className="flex mt-3">
           <input type="checkbox" className="mx-3" />
-          <p>lorem ipsum</p>
+          <p>$0 - $75</p>
         </div>
         <div className="flex mt-3">
           <input type="checkbox" className="mx-3" />
-          <p>lorem ipsum</p>
+          <p>$75 - $150</p>
         </div>
         <div className="flex mt-3">
           <input type="checkbox" className="mx-3" />
-          <p>lorem ipsum</p>
+          <p>$150+</p>
         </div>
       </div>
     </div>
